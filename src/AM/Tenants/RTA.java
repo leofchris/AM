@@ -14,96 +14,46 @@ import java.util.HashMap;
  * @author Chris
  */
 public class RTA {
-  
-    //Name of Land Lord
-    String landLord;
+
+    private String unitAddress;
+    private String landLordAddress;
+    private String landLordEmail;
+    private String tenantEmail;
+    private String contactInfo;
+    private String typeOfTenancy;
+    private String installments;
+    private String payableTo;
+    private String methodOfPayment;
+    private String discountReason;
+    private String keyDescription;
+    private String smokingRules;
+    private String whenToPay;
     
-    //Name of tenants living in complex
-    ArrayList<String> tenants = new ArrayList<String>();
+    private Date startTenanacy = new Date();
     
-    //Unit Address
-    String unitAddress;
+    private int id;
+
+    private double parkingFee;
+    private double rentalUnitFee;
+    private double NSF;
+    private double lastMonthDeposit;
+    private double keyDeposit;
+ 
+    private ArrayList<String> tenants = new ArrayList<String>();
+    private ArrayList<String> landLords = new ArrayList<String>();
     
-    //Is it Condominum
-    boolean isCondominum;
+    private HashMap<String, Integer> services = new HashMap<>();
+    private HashMap<String, String> includeService = new HashMap<>();
+    private HashMap<String, String> utilitiesResponsibility = new HashMap<>();
     
-    //Address of Land Lord   
-    String landLordAddress;
-    
-    //Is it Email
-    boolean isEmailAllowed;
-    
-    //Land lord e-mail Address
-    String landLordEmail;
-    
-    //Tenant e-mail Addres
-    String tenantEmail;
-    
-    //Is it land lord emergency contact
-    boolean isLandLordContact;
-    
-    //Email address or phone number of contactee
-    String contactInfo;
-    
-    //The YYYY/MM/DD the tenant started
-    Date startTenanacy = new Date();
-    
-    //1. a fixed Length ending on YYYY/MM/DD
-    //2. a montly Tenancy
-    //3. Other (such as Daily, weekly, specify)
-    String typeOfTenancy;
-    
-    //What day is rent Paid on
-    // First,second (etc)
-    int dayToPay;
-    
-    //When to pay rent, monthly, weekly.
-    String installments;
-    
-    //The Summary of rent
-    
-    //Base rent of unit
-    int rentalUnitFee;
-    //Fee for parking
-    int parkingFee;
-    //Utility or services 
-    HashMap<String, Integer> services = new HashMap<>();
-    
-    //The indiviual allow to recieve the money
-    String payAble;
-    
-    //Method of payment
-    String methodOfPayment;
-    
-    //Partial Period
-    boolean isPartialPeriod;
-    
-    //Charge Back Fee Amount capped at 20
-    int NSF;
-    
-    //Serive that will be included to the tenat
-    HashMap<String, String> includeService = new HashMap<>();
-    
-    //Responsiblity of uilties
-     HashMap<String, String> utilitiesResponsibility = new HashMap<>();
-     
-     //Rent Discount
-     boolean isDiscount;
-     String discountReason;
-    
-     boolean isRentDeposit;
-     int LastMonthDeposit;
-     
-     boolean isKeyDeposit;
-     int keyDeposit;
-     String keyDescription;
-     
-     boolean isSmokingAllowed;
-     String smokingRules;
-     
-     boolean isTenantInsured;
-     
-    
-    
-    
+    private boolean isCondominum;
+    private boolean isEmailAllowed;
+    private boolean isLandLordContact;
+    private boolean isPartialPeriod;
+    private boolean isDiscount;
+    private boolean isRentDeposit;
+    private boolean isKeyDeposit;
+    private boolean isSmokingAllowed;
+    private boolean isTenantInsured; 
+
 }

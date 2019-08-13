@@ -5,10 +5,19 @@
  */
 package AM.Tenants;
 
+
+import java.util.Date;
+
 /**
  *
  * @author Chris
  */
 public class Parking {
+    private String assignedSpot;
+    private String location;
     
+    private int id;
+    private int parkingFee;
+    
+    private Date duration;
 }

@@ -10,5 +10,6 @@ package AM.Tenants;
  * @author Chris
  */
 public class Repairs {
-    
+    private int id;
+   
 }

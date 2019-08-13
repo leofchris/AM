@@ -12,4 +12,7 @@ package AM.Building;
 public class Building {
     private String Address;
     
+    private int numberOfUnits;
+    
+    private String[] units= new String[numberOfUnits]; 
 }

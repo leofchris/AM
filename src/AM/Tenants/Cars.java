@@ -10,5 +10,10 @@ package AM.Tenants;
  * @author Chris
  */
 public class Cars {
+    private String colour;
+    private String licensePlate;
+    private String model;
     
+    private int id;
+    private int year;
 }

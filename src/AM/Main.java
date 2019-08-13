@@ -4,7 +4,8 @@
  * and open the template in the editor.
  */
 package AM;
-
+import AM.Constants.constants;
+import AM.database.database;
 
 /**
  *
@@ -16,7 +17,14 @@ public class Main {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+       
+        if(database.connectToDB() != null){
+          
+        }else{
+          database.createDB(constants.databaseName);
+          database.initializeDB(database.connectToDB());
+        }
+        
     }
     
 }

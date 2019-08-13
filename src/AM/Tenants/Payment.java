@@ -5,10 +5,21 @@
  */
 package AM.Tenants;
 
+import java.util.Date;
+
 /**
  *
  * @author Chris
  */
 public class Payment {
+    private int id;
+    
+    private Date rentPaidOn;
+    
+    private double rentIncrease; 
+    private double rentOwed;
+    private double amountPaid;
+   
+    private boolean isLate;
     
 }
