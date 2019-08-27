@@ -49,6 +49,7 @@ public class database {
       PreparedStatement ps = con.prepareStatement("CREATE DATABASE IF NOT EXISTS "+ databaseName);
       System.out.println("Creating "+constants.databaseName+" database..."); 
       ps.executeUpdate();
+      ps.close();
       System.out.println("Successfully created "+ constants.databaseName+" database"); 
     } catch(SQLException e){
       System.out.println(e);
@@ -109,7 +110,11 @@ public class database {
                            + " `Amount Of Rent Owed` FLOAT,"
                            + " `Amount Of Rent Paid` FLOAT,"
                            + " `Rent Paid On` DATE)";
-                         
+       
+       final String loginSQL = "CREATE TABLE `Login` ("
+                           + " `login` varchar(255),"
+                           + " `password` varchar(255))";
+                          
                            
        try{
          Class.forName("com.mysql.jdbc.Driver");  
@@ -135,7 +140,11 @@ public class database {
       
       ps = con.prepareStatement(paymentSQL);                
       ps.executeUpdate();
+      
+      ps = con.prepareStatement(loginSQL);                
+      ps.executeUpdate();
      
+      ps.close();
     } catch(SQLException e){
       System.out.println(e);
     } 

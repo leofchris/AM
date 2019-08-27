@@ -1,0 +1,80 @@
+body{
+	margin:0;
+	padding: 0;
+	background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url('BG.jpg');
+	background-size: cover;
+	background-position: center;
+}
+
+.loginbox{
+
+ border: 1px transparent green;
+ position: absolute;
+
+ top:50%;
+ left: 50%;
+ transform: translate(-50%,-50%);
+
+ width:420px;
+ height:200px;
+
+}
+
+.lock{
+ padding-right: 10.5px;
+ padding-left: 2px;
+}
+
+.user{
+ padding-right: 8px;
+
+}
+
+.loginbox input[type="email"],[type="password"]{
+	background: transparent;
+	border-style: none;
+	border-bottom: 1px solid grey;
+	outline: none;
+	color:white;
+	font-family: "Times New Roman", Times, serif;
+	padding-bottom: 9px;
+
+
+}
+
+.loginbox input{
+	width: 85%;
+	margin-bottom: 20px;
+}
+
+.loginbox input[type="submit"]{
+	border:none;
+	
+	outline: none;
+	height: 40px;
+	color: white;
+	font-size: 18px;
+	border-radius: 3px;
+	width:30%;
+	margin-left: 62%;
+	background: #0033cc;
+	font-weight: 100;
+	font-family: "Georgia";
+
+}
+
+.loginbox input[type="submit"]:active{
+	 border: 2px solid;
+ 
+	
+}
+
+
+
+
+	
+
+
+
+
+	

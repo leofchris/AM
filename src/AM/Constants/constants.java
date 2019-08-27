@@ -14,4 +14,6 @@ public class constants {
     public static final String URL = "jdbc:mysql://localhost:3306/"+databaseName;
     public static final String userName = "root";
     public static final String password = "root";
+    public static final String loginUsername = "root";
+    public static final String loginpassword = "admin";
 }
