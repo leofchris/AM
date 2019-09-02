@@ -67,6 +67,7 @@ int header = -1;
     protected void channelRead0(ChannelHandlerContext ctx, Object msg) {
         
            header = packetProcessor.getPacketHeader((HttpRequest)msg);
+          
            final serverHandler handler = packetProcessor.getHandler(header);
             
            handler.handlePacket(ctx, msg);

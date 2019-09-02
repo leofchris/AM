@@ -11,7 +11,10 @@ package AM.Opcode;
  */
 public enum recvOpcode {
     Login(0x00),
-    Register(0x01);
+    Register(0x01),
+    Style(0x02),
+    BG(0x03),
+    favicon(0x04);
     
     private int header;
     

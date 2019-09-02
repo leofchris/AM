@@ -30,6 +30,9 @@ public class packetProcessor {
    public void registerHandler(){
        handlers[recvOpcode.Login.getHeader()] = new loginHandler();
        handlers[recvOpcode.Register.getHeader()] = new registerHandler();
+       handlers[recvOpcode.Style.getHeader()] = new styleHandler();
+        handlers[recvOpcode.BG.getHeader()] = new BGHandler();
+        handlers[recvOpcode.favicon.getHeader()] = new faviconHandler();
    }
    
    public static packetProcessor createProcessor(){
@@ -45,9 +48,31 @@ public class packetProcessor {
     }
    
    public static int getPacketHeader(HttpRequest packet){
-       
+      
        StringBuilder packetAction = new StringBuilder(packet.uri());
-       packetAction.deleteCharAt(0);
+       
+       if (packetAction.toString().contains(".jpg")){
+           packetAction.deleteCharAt(0);
+          int length = packetAction.toString().length();
+          packetAction.delete(length-4, length);
+       } else if (packetAction.toString().contains(".css")){
+            packetAction.deleteCharAt(0);
+          int length = packetAction.toString().length();
+          packetAction.delete(length-4, length);
+       } else if (packetAction.toString().contains(".html")){
+           packetAction.deleteCharAt(0);
+           int length = packetAction.toString().length();
+           packetAction.delete(length-5, length);
+       } else if (packetAction.toString().contains(".ico")){
+            packetAction.deleteCharAt(0);
+          int length = packetAction.toString().length();
+          packetAction.delete(length-4, length);
+       }
+       
+       else{
+            packetAction.deleteCharAt(0);
+       }
+      
        
        String packetHeader = packetAction.toString();
        

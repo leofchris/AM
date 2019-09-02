@@ -8,14 +8,14 @@ body{
 
 .loginbox{
 
- border: 1px transparent green;
+ 
  position: absolute;
 
  top:50%;
  left: 50%;
  transform: translate(-50%,-50%);
 
- width:420px;
+ width:450px;
  height:200px;
 
 }
@@ -38,43 +38,57 @@ body{
 	color:white;
 	font-family: "Times New Roman", Times, serif;
 	padding-bottom: 9px;
-
-
 }
 
 .loginbox input{
 	width: 85%;
 	margin-bottom: 20px;
+	
 }
 
 .loginbox input[type="submit"]{
-	border:none;
-	
-	outline: none;
-	height: 40px;
-	color: white;
-	font-size: 18px;
-	border-radius: 3px;
-	width:30%;
-	margin-left: 62%;
-	background: #0033cc;
-	font-weight: 100;
-	font-family: "Georgia";
 
+	box-shadow: 0px 1px 0px 0px #1c1b18;
+	background:linear-gradient(to bottom, #eae0c2 5%, #ccc2a6 100%);
+	background-color:#eae0c2;
+	border-radius:15px;
+	border:2px solid #333029;
+	display:inline-block;
+	cursor:pointer;
+	color:#505739;
+	font-family:Arial;
+	font-size:14px;
+	font-weight:bold;
+	padding:12px 16px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ffffff;
+	width:30%;
+	margin-left: 277px;
 }
 
 .loginbox input[type="submit"]:active{
-	 border: 2px solid;
- 
-	
+	 box-shadow: 0 0 3px; 
+	 color:#505739;
+	 outline: none;
 }
 
+.loginbox input[type="submit"]:hover{
+	 cursor: pointer;
+}
 
+.loginbox a{
+	color:white;
+	padding-left: 81px;
+	position: absolute;
+	top:106px;
+}
 
+.loginStatus{
 
-	
+ color:red;
 
+ margin-top: 318px;
+ text-align: center;
 
+}
 
-
-	
