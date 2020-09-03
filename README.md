@@ -1,2 +1,2 @@
 # AM
-Automated Aparment Manger System
+Automated Apartment Manager System
